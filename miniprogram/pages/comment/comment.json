@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+  "van-cell": "vant-weapp/cell"
+  },
+  "navigationBarTitleText": "我评论的"
+}

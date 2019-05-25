@@ -1,0 +1,70 @@
+<view class='mycontainer'>
+<!--pages/detail/detail.wxml-->
+<!-- 影片介绍 -->
+<text class='summaryTips'>影片介绍</text> 
+<view class='movieSummary'>{{summary}} </view>
+<!-- 预告片 -->
+<text class='summaryTips'>预告片</text>
+<swiper scroll-x class='blooper'>
+<swiper-item wx:for="{{bloopers}}" wx:key="{{index}}">
+ <video class='blooperVedio'
+    src="{{item.resource_url}}"
+    controls
+    enable-play-gesture
+  ></video>
+</swiper-item>
+</swiper>
+
+<view class='myrate'>
+<!-- 收藏、看过 -->
+<view>
+我要收藏: <van-icon name="star-o" bind:click="collect" color='{{collectColor}}'/>
+我已看过: <van-icon name="passed" bind:click="pass" color='{{passedColor}}'/>
+</view>
+
+<!-- 我要评论 -->
+<view> 
+
+<view class='myratecommponent'>
+<text>我的评分：</text>
+<van-rate 
+ icon="like"
+ void-icon="like-o"
+ readonly = "{{mycomment.length > 0}}"
+ value="{{ myrate }}" bind:change="onrateChange" />
+</view>
+
+ <block wx:if="{{mycomment.length <= 0}}">
+ <van-field
+    type="textarea"
+    autosize
+    value="{{ mycomment }}"
+    placeholder="写下你的评论"
+    bind:change="onCommentChange"
+  />
+  <van-button bindtap='upLoadImage' type="default">上传图片</van-button>
+  <view>
+  <image wx:for="{{commentImages}}" wx:key="{{index}}" class='commentImage' src='{{item}}'></image>
+  </view>
+  <van-button bindtap='uploadComment' type="primary" disabled='{{!canCommit}}' size="large">提交评价</van-button> 
+</block>
+<block wx:else>
+<view class='comment'>{{mycomment}}</view>
+  <image wx:for="{{commentImages}}" wx:key="{{index}}" class='commentImage' src='{{item}}'></image>
+    <van-button bindtap='deleteComment' type="warning" size="large">删除我的评价</van-button> 
+</block>
+</view>
+</view>
+
+
+
+<!-- 热评 -->
+<text class='summaryTips'>热评</text>
+<view class='ratecontainer' wx:for="{{popular_reviews}}" wx:key="{{index}}">
+<view class='rate'>
+<text class='nickname'>昵称:{{item.author.name}} 评分： </text>
+<van-rate class="rate" value="{{ item.rating.value }}"/>
+</view>
+<view class='comment'>{{item.summary}}</view>
+</view>
+</view>

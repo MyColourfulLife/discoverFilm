@@ -1,0 +1,2 @@
+<van-cell wx:for="{{showItems}}" wx:key="{{index}}" title="{{item.movieName}}" size="large" is-link clickable bind:click="cellClick" data-movieid="{{item._id}}"/>
+

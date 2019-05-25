@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "van-icon": "vant-weapp/icon",
+      "van-cell": "vant-weapp/cell"
+  },
+  "navigationBarTitleText": "个人中心"
+}

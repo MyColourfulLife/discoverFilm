@@ -1,0 +1,60 @@
+/* pages/detail/detail.wxss */
+.movieContainer {
+  display: flex;
+  padding: 10rpx;
+}
+.movieCover {
+  width: 50%;
+  height: 500rpx;
+}
+
+.movieSummary {
+  flex: 1;
+  font-size: 28rpx;
+}
+.summaryTips {
+  color: black
+}
+.blooper {
+  width: 100%;
+}
+
+.blooperVedio {
+  width: 90%;
+  height: 100%;
+}
+.rate {
+  display: inline-block;
+
+}
+.ratecontainer {
+  border-bottom: solid 1px lightgrey;
+  margin: 4rpx;
+}
+
+.comment {
+  font-size: 30rpx;
+    color: darkgray
+}
+.nickname {
+  font-size: 36rpx;
+}
+
+.myrate {
+  margin-top: 16rpx;
+}
+
+.commentImage {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.mycontainer {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.myratecommponent {
+  display: flex;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}

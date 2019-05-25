@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/moive/moive",
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/collect/collect",
+    "pages/haveSeen/haveSeen",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E54847",
+    "navigationBarTitleText": "发现电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#E54847",
+    "list": [{
+      "pagePath": "pages/moive/moive",
+      "text": "电影",
+      "iconPath": "images/film.png",
+      "selectedIconPath": "images/film-actived.png"
+    },{
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "images/profile.png",
+      "selectedIconPath":"images/profile-actived.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json"
+}

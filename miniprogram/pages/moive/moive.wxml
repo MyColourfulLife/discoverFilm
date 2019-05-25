@@ -1,0 +1,18 @@
+<!--pages/moive/moive.wxml-->
+<view>正在热映</view>
+
+<block  wx:for="{{movieList}}" wx:key="{{index}}">
+<view  class='movie'  bindtap="showDetail" data-movieid="{{item.id}}">
+<image class='movie-image' src='{{item.images.small}}'></image>
+<view class='movie-info'>
+<view class='movie-title'>{{item.title}}</view>
+<view class='movie-rate'>评分：{{item.rating.average}}</view>
+<view>导演：{{item.directors[0].name}} </view>
+<view class='movie-cast'>主演：
+<text wx:for="{{item.casts}}" wx:key="{{index}}">{{item.name}} </text>
+</view>
+<view>年份：{{item.year}}</view>
+</view>
+</view>
+
+</block>
